@@ -74,7 +74,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-top: 16px;
+  margin-block-start: 16px;
 }
 
 .search-form__fieldset {
@@ -82,7 +82,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  margin-bottom: 5px;
+  margin-block-end: 5px;
   font-family: inherit;
   font-weight: 400;
   font-size: inherit;
@@ -126,7 +126,7 @@ ol {
   block-size: 19px;
 }
 
-input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
   content: "";
   display: block;
   margin: 1px;
@@ -135,7 +135,7 @@ input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   block-size: 15px;
 }
 
-button {
+.button {
   border: 1px solid #fff;
   padding: 5px 0;
   color: currentColor;
@@ -175,13 +175,13 @@ button {
 
 .content__list {
   position: relative;
-  height: 298px;
-  margin-top: 26px;
+  block-size: 298px;
+  margin-block-start: 26px;
   overflow: auto;
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .content__card-link {
@@ -212,11 +212,14 @@ button {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
   max-width: 200px;
-  margin-top: 6px;
+  margin-block-start: 6px;
   font-family: inherit;
   line-height: 90%;
 }
